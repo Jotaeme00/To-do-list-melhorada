@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>To-do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+
+        <div class="input-container">
+            <input type="text" id="inputTarefa" placeholder="Adicione uma nova tarefa" />
+            <select id="categoriaTarefa">
+                <option value="pessoal">Pessoal</option>
+                <option value="trabalho">Trabalho</option>
+                <option value="estudo">Estudo</option>
+            </select>
+            <button id="adicionarTarefa">Adicionar Tarefa</button>
+        </div>
+
+        <div class="filtros">
+            <button id="filtroTodas">Todas</button>
+            <button id="filtroPendentes">Pendentes</button>
+            <button id="filtroConcluidas">Concluídas</button>
+        </div>
+
+        <ul id="listaTarefas"></ul>
+    </div>
+</body>
+</html>
