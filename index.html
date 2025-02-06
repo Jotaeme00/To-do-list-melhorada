@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <title>To-do List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-
-        <div class="input-container">
-            <input type="text" id="inputTarefa" placeholder="Adicione uma nova tarefa" />
-            <select id="categoriaTarefa">
-                <option value="pessoal">Pessoal</option>
-                <option value="trabalho">Trabalho</option>
-                <option value="estudo">Estudo</option>
-            </select>
-            <button id="adicionarTarefa">Adicionar Tarefa</button>
-        </div>
-
-        <div class="filtros">
-            <button id="filtroTodas">Todas</button>
-            <button id="filtroPendentes">Pendentes</button>
-            <button id="filtroConcluidas">Concluídas</button>
-        </div>
-
-        <ul id="listaTarefas"></ul>
-    </div>
+  <div class="container">
+    <h1>Lista de Tarefas</h1>
+    <form id="formTarefa" aria-label="Formulário de Tarefas">
+      <input id="inputTarefa" type="text" placeholder="Digite sua tarefa" aria-label="Nome da tarefa" required />
+      <select id="categoriaTarefa" aria-label="Selecione a categoria da tarefa">
+        <option value="" disabled selected>Escolha a categoria</option>
+        <option value="Trabalho">Trabalho</option>
+        <option value="Casa">Casa</option>
+        <option value="Estudos">Estudos</option>
+      </select>
+      <button id="adicionarTarefa" type="submit" aria-label="Adicionar tarefa">Adicionar Tarefa</button>
+    </form>
+    <ul id="listaTarefas" aria-live="polite"></ul>
+  </div>
+  <script type="module" src="script.js"></script>
+  <script type="module" defer src="ui.js"></script>
+  <script type="module" src="storage.js"></script>
 </body>
 </html>
